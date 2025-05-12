@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="script.js" type ="module" defer></script>
+    </head>
+    <body>
+        <div id = "container">
+            <header>
+                <h1>People Search</h1>
+                <ul class = "navigation">
+                    <a href="PeopleSearch.html"><li>People Search</li></a>
+                    <a href="VehicleSearch.html"><li>Vehicle Search</li></a>
+                    <a href="AddVehicle.html"><li>Add a Vehicle</li></a>
+                </ul>
+            </header>
+            <main>
+                <form>
+                    <label for="name">Search by driver name</label>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="license">Search by driving license number</label>
+                    <input type="text" id="license" name="license"><br>
+                    <button>Submit</button>
+                </form>
+                <p id = "message"></p>
+                <div id ="results">
+
+                </div>
+            </main>
+            <aside>
+                <img src ="images/placeholder.png" alt = "Person">
+            </aside>
+            <footer>
+                <p>You can search people on this page.</p>
+            </footer>
+        </div>
+    </body>
+</html>
