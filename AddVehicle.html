@@ -1,9 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="sylesheet.css">
+        <meta charset="utf-8" />
+        <meta name="author" content="Yusuf Pashmfouroush" />
+        <meta name="description" content="Add a Vehicle" />
+        <title>Add a Vehicle</title>
+        <link rel="stylesheet" href="style/stylesheet.css">
+        <script type = "module">
+            import {fetchPeopleData, fetchVehicleData, fetchAllPeople, insertPerson, insertVehicle, fetchRego} from './scripts/supabaseModule.js';
+            window.fetchPeopleData = fetchPeopleData;
+            window.fetchVehicleData = fetchVehicleData;
+            window.fetchAllPeople = fetchAllPeople;
+            window.insertPerson = insertPerson;
+            window.insertVehicle = insertVehicle;
+            window.fetchRego = fetchRego;
+        </script>
+        <script src="scripts/addvehiclescript.js" defer></script>
+        
     </head>
     <body>
-        
+        <div id = "container">
+            <header>
+                <h1>Add a Vehicle</h1>
+                <ul class = "navigation">
+                    <li><a href="peoplesearch.html">People Search</a></li>
+                    <li><a href="vehiclesearch.html">Vehicle Search</a></li>
+                    <li><a href="addvehicle.html">Add a Vehicle</a></li>
+                </ul>
+            </header>
+            <main>
+                <form>
+                    <label for="rego">registraion/plate number</label>
+                    <input type="text" id="rego" name="rego"><br>
+                    <label for="make">make</label>
+                    <input type="text" id="make" name="make"><br>
+                    <label for="model">model</label>
+                    <input type="text" id="model" name="model"><br>
+                    <label for="colour">colour</label>
+                    <input type="text" id="colour" name="colour"><br>
+                    <label for="owner">owner</label>
+                    <input type="text" id="owner" name="owner"><br>
+                    <button type="button" id = "check" disabled>Check owner</button>
+                </form>
+                <p id = "message"></p>
+                <div id ="owner-results">
+                    
+                </div>
+                <button type="button" id = "newowner" disabled>New owner</button>
+                <div id = "newform">
+
+                </div>
+                <button type ="button" id = "addv">Add vehicle</button>
+                <p id = "message-vehicle"></p>
+            </main>
+            <aside>
+                <img src ="images/placeholder.png" alt = "Vehicle">
+            </aside>
+            <footer>
+                <p>You can add vehicles on this page.</p>
+            </footer>
+        </div>
     </body>
 </html>

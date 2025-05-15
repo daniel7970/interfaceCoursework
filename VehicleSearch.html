@@ -1,9 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <link rel="stylesheet" href="sylesheet.css">
+        <meta charset="utf-8" />
+        <meta name="author" content="Yusuf Pashmfouroush" />
+        <meta name="description" content="Vehicle Search" />
+        <title>Vehicle Search</title>
+        <link rel="stylesheet" href="style/stylesheet.css">
+        <script type = "module">
+            import {fetchVehicleData, fetchAllPeople} from './scripts/supabaseModule.js';
+            window.fetchVehicleData = fetchVehicleData;
+            window.fetchAllPeople = fetchAllPeople;
+        </script>
+        <script src="scripts/vehiclescript.js" defer></script>
+        
     </head>
     <body>
-        
+        <div id = "container">
+            <header>
+                <h1>Vehicle Search</h1>
+                <ul class = "navigation">
+                    <li><a href="peoplesearch.html">People Search</a></li>
+                    <li><a href="vehiclesearch.html">Vehicle Search</a></li>
+                    <li><a href="addvehicle.html">Add a Vehicle</a></li>
+                </ul>
+            </header>
+            <main>
+                <form>
+                    <label for="rego">Search by vehicle registration number</label>
+                    <input type="text" id="rego" name="rego"><br>
+                    <button type="button">Submit</button>
+                </form>
+                <p id = "message"></p>
+                <div id ="results">
+
+                </div>
+            </main>
+            <aside>
+                <img src ="images/placeholder.png" alt = "Vehicle">
+            </aside>
+            <footer>
+                <p>You can search vehicles on this page.</p>
+            </footer>
+        </div>
     </body>
 </html>
